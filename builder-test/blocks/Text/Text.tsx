@@ -1,17 +1,15 @@
 import { Heading } from '@components/Heading'
 
 interface TextProps {
-  options: {
-    title: string
-    description: string
-  }
+  title: string
+  description: string
 }
 
-const Text = (props: any) => {
+const Text = ({ title, description }: TextProps) => {
   return (
-    <div className="py-30">
-      <Heading title={props.options?.title} />
-      <div dangerouslySetInnerHTML={{ __html: props.options?.description }} />
+    <div className='py-30'>
+      <Heading title={title} />
+      <div dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   )
 }
