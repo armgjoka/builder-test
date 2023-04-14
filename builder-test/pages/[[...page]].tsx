@@ -85,6 +85,7 @@ export default function Path({ pages, attributes, locale }: InferGetStaticPropsT
         <BuilderComponent
           context={{ attributes }}
           data={{ attributes, locale }}
+          locale={locale}
           model="page"
           content={pages}
         />
